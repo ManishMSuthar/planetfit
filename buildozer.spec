@@ -10,7 +10,6 @@ package.name = planetfit
 package.domain = org.manis
 
 #REQUIRED
-entrypoint = planetfit.py
 android.permissions = INTERNET
 
 # (str) Source file to use as the main entry point for the app
