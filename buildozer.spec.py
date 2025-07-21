@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = PlanetFit
+title = planetFit
 
 # (str) Package name
 package.name = planetfit
@@ -18,6 +18,9 @@ entrypoint = planetfit.py
 
 # (str) Icon of the application
 icon.filename = logo.png
+
+source.dir = .
+version = 1.0
 
 # (list) Permissions
 android.permissions = INTERNET
