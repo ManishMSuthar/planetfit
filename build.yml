@@ -2,9 +2,11 @@ name: Build PlanetFit
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
@@ -17,26 +19,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run tests (if available)
+      - name: Run tests
         run: |
-          if [ -d "tests" ] || [ -f "test_main.py" ]; then
-            pip install pytest
-            mkdir -p test-results
-            pytest --junitxml=test-results/results.xml
-          else
-            echo "No tests found, skipping pytest."
-          fi
+          pytest
 
-      - name: Upload test artifacts (if exists)
-        if: always()
+      - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: ./test-results/results.xml
+          path: ./test-results/
