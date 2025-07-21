@@ -9,9 +9,6 @@ package.name = planetfit
 # (str) Package domain (can be anything, doesn't need to be real)
 package.domain = org.manis
 
-#REQUIRED
-android.permissions = INTERNET
-
 # (str) Source file to use as the main entry point for the app
 entrypoint = planetfit.py
 
