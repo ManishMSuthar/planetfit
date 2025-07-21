@@ -25,7 +25,7 @@ android.permissions = INTERNET
 orientation = portrait
 
 # (list) Application requirements
-requirements = python3,kivy
+requirements = python3==3.10,kivy
 
 # (str) Presplash screen image (optional)
 # presplash.filename = presplash.png
